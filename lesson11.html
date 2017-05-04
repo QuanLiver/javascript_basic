@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            // Way 1
+            var person = {
+                firstName: "Tran",
+                middleName: "Ngoc",
+                lastName: "Quan",
+
+                getFullName: function(){
+                    return('My name is : ' + this.firstName + ' ' + this.middleName + ' ' + this.lastName);
+                }
+            }
+
+            console.log(person.getFullName());
+
+            //Way
+
+            var person1 = new Object();
+            person1.firstName1 = "Quan";
+            person1.lastName1 = "Tran";
+            person1.getName = function(){
+                return (this.firstName1 + ' ' + this.lastName1);
+            }
+            // console.log(person1.getName());
+
+            // if(person1.hasOwnProperty("firstName1")){
+            //     console.log(person1.firstName1); 
+            // }
+            // else{
+            //     console.log("Not exist!");
+            // }
+
+            // for(var key in person1){
+            //     console.log(key);
+            // }
+
+           function changeFullName(person1){
+               person1.firstName1 = "Quan2";
+               person1.lastName1 = "Tran3";
+           }
+
+           changeFullName(person1);
+
+            console.log(person1);
+
+            
+        </script>
+    </body>
+</html>
